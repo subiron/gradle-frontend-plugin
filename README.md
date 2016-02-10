@@ -1,6 +1,8 @@
 
 # Gradle Frontend Plugin
 
+![alt tag](https://travis-ci.org/subiron/gradle-frontend-plugin.svg?branch=master)
+
 ## Description
 
 Set of tasks which wraps common frontend-tools and provide its binaries.
