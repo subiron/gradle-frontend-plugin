@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+group = 'org.misiewicz.gradle'
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.github.eirslett:frontend-plugin-core:0.0.27'
+}
