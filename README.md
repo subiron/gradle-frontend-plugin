@@ -7,6 +7,8 @@
 
 Set of tasks which wraps common frontend-tools and provide its binaries.
 
+Disclaimer:
+This plugin is just wrapper around core module of (frontend-maven-plugin|https://github.com/eirslett/frontend-maven-plugin)
 
 ## Tasks
 
