@@ -2,5 +2,5 @@ sudo: required
 language: groovy
 jdk:
   - oraclejdk7
-  before_install:
-    - chmod +x gradlew
+before_install:
+ - chmod +x gradlew
