@@ -1,12 +1,12 @@
-package org.misiewicz.frontend
+package org.uberiron.gradle.frontend
 
-import org.misiewicz.frontend.extensions.FrontendExtension
-import org.misiewicz.frontend.task.Grunt
-import org.misiewicz.frontend.task.Gulp
-import org.misiewicz.frontend.task.InstallNodeAndNpm
-import org.misiewicz.frontend.task.Npm
+import org.uberiron.gradle.frontend.task.Gulp
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.uberiron.gradle.frontend.extensions.FrontendExtension
+import org.uberiron.gradle.frontend.task.Grunt
+import org.uberiron.gradle.frontend.task.InstallNodeAndNpm
+import org.uberiron.gradle.frontend.task.Npm
 
 public class FrontendPlugin implements Plugin<Project> {
     @Override

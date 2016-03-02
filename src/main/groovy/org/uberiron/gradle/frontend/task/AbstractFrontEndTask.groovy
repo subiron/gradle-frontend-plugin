@@ -1,12 +1,12 @@
-package org.misiewicz.frontend.task
+package org.uberiron.gradle.frontend.task
 
-import org.misiewicz.frontend.extensions.FrontendExtension
 import com.github.eirslett.maven.plugins.frontend.lib.FrontendPluginFactory
 import com.github.eirslett.maven.plugins.frontend.lib.ProxyConfig
 import org.apache.commons.collections.ListUtils
 import org.apache.commons.lang3.StringUtils
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
+import org.uberiron.gradle.frontend.extensions.FrontendExtension
 
 abstract class AbstractFrontEndTask extends DefaultTask {
 

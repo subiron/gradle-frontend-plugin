@@ -1,4 +1,4 @@
-package org.misiewicz.frontend.extensions
+package org.uberiron.gradle.frontend.extensions
 
 
 class FrontendExtension {

@@ -1,15 +1,19 @@
+buildscript {
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.3.1'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
+    }
+    repositories {
+        jcenter();
+    }
+}
+
 apply plugin: 'groovy'
 apply plugin: 'maven'
 
-group = 'org.misiewicz.gradle'
-version = '1.0.0-SNAPSHOT'
+apply from: "$projectDir/gradle/dependencies.gradle"
+apply from: "$projectDir/gradle/distribution.gradle"
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile gradleApi()
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'com.github.eirslett:frontend-plugin-core:0.0.27'
-}
+group = 'org.uberiron.gradle'
+version = '1.0.0'
+defaultTasks('build')

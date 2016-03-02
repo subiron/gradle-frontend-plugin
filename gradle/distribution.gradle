@@ -1,0 +1,65 @@
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+group = 'org.uberiron.gradle'
+archivesBaseName = 'gradleFrontendPlugin'
+
+if (System.env.TRAVIS_BUILD_NUMBER) {
+    version = "${version}.${System.env.TRAVIS_BUILD_NUMBER}"
+}
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier 'sources'
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier 'javadoc'
+}
+
+task testsJar(type: Jar) {
+    from sourceSets.test.allSource
+    classifier 'tests'
+}
+
+publishing {
+    publications {
+        gradleFrontendPlugin(MavenPublication) {
+            from components.java
+            artifactId archivesBaseName
+
+            artifact sourcesJar
+
+            artifact javadocJar
+
+            artifact testsJar
+        }
+    }
+}
+
+ext {
+    bintrayUser = System.env.bintrayUser ?: null
+    bintrayKey = System.env.bintrayApiKey ?: null
+}
+
+bintray {
+    user = bintrayUser
+    key = bintrayKey
+    publications = [archivesBaseName]
+    publish = true
+
+    pkg {
+        repo = 'maven'
+        name = archivesBaseName
+        desc = 'Gradle frontend plugin'
+        websiteUrl = 'https://github.com/subiron/gradle-frontend-plugin'
+        issueTrackerUrl = 'https://github.com/subiron/gradle-frontend-plugin/issues'
+        vcsUrl = 'https://github.com/subiron/gradle-frontend-plugin.git'
+        licenses = ['Apache-2.0']
+
+        version {
+            desc = 'Initial release.'
+        }
+    }
+}

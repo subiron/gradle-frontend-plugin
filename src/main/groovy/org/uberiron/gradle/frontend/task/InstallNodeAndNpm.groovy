@@ -1,4 +1,4 @@
-package org.misiewicz.frontend.task;
+package org.uberiron.gradle.frontend.task;
 
 import com.github.eirslett.maven.plugins.frontend.lib.InstallationException;
 import com.github.eirslett.maven.plugins.frontend.lib.NodeAndNPMInstaller;

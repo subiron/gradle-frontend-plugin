@@ -1,0 +1,11 @@
+dependencies {
+    compile gradleApi()
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.slf4j:slf4j-api:1.7.+'
+    compile 'com.github.eirslett:frontend-plugin-core:0.0.27'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}

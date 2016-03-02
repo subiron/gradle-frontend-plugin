@@ -1,4 +1,4 @@
-package org.misiewicz.frontend.task;
+package org.uberiron.gradle.frontend.task;
 
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.InputFile
